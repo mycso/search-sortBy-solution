@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5em;
+}
+
+.nav {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.nav ul li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  zoom:1;
+  *display: inline;
+  padding-left: 20px;
+  /* this fix is needed for IE7- */
+}
+
+.text-align {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  text-align: right;
+  margin-bottom: 20px;
+  display: grid;
+  justify-content: right;
+}
+
+input[type="text"] {
+  border-radius: 18px;
+  padding: 7px;
+}
+
+.img-grid {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.large {
+  background: rgba(255, 0, 0, 0.25);
+  grid-column: auto;
+  grid-row: auto / span 2;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 13.2% 13.2% 27.5% 13.2% 13.2% 13.2%;
+  grid-gap: 1em 1em;
+  grid-auto-flow: row dense;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 13.2% 13.2% 13.2% 13.2% 27.5% 13.2%;
+  grid-gap: 1em 1em;
+  grid-auto-flow: row dense;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.gridTop {
+  display: grid;
+  grid-template-columns: 13.2% 13.2% 13.2% 13.2% 13.2% 13.2%;
+  grid-gap: 1em 1em;
+  grid-auto-flow: row dense;
+  grid-template-rows: 180px 180px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hide-grid {
+  display: none;
+}
+
+.item {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
+}
+
+@media only screen and (max-width: 830px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  body {
+    padding: 2em;
+  }
+  .large {
+    height: auto;
+  }
+
+  .searchInput {
+    height: 34px;
+    width: 100%;
+  }
+
+  input[type="text"] {
+    border-radius: 18px;
+    padding: 7px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  body {
+    padding: 2em;
+  }
+
+  .large {
+    height: auto;
+  }
+
+  input[type="text"] {
+    border-radius: 18px;
+    padding: 7px;
+  }
+}
+
+
+
